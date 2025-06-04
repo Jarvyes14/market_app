@@ -1,6 +1,6 @@
 package com.tecdesoftware.market.persistance.entity;
 
-
+import java.util.*;
 import jakarta.persistence.*;
 
 @Entity
@@ -20,6 +20,9 @@ public class Cliente {
 
     @Column(name = "correo_electronico")
     private String correoElectronico;
+
+    @OneToMany(mappedBy = "cliente")
+    private List<Compra> compras;
 
     public String getId() {
         return id;

@@ -3,6 +3,7 @@ package com.tecdesoftware.market.persistance.entity;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Table(name = "productos")
@@ -28,6 +29,13 @@ public class Producto {
     private Integer cantidadStock;
 
     private Boolean estado;
+
+    @ManyToOne
+    @JoinColumn (name= "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria;
+
+    @OneToMany(mappedBy = "producto")
+    private List<CompraProducto> compra;
 
     public Integer getIdProducto() {
         return idProducto;
