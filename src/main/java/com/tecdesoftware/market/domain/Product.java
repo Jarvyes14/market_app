@@ -1,79 +1,69 @@
 package com.tecdesoftware.market.domain;
-import com.tecdesoftware.market.persistance.entity.Categoria;
-
-import java.math.BigDecimal;
 
 public class Product {
-    private Integer idProducto;
-    private String nombre;
-    private Integer idCategory;
-    private String codeBarra;
-    private BigDecimal precio;
-    private Integer cantidadStock;
-    private Boolean state;
-    private Categoria categoria;
 
-    public Integer getIdProducto() {
-        return idProducto;
+    private Integer productId;
+    private String name;
+    private Integer categoryId;
+    private String barcode;
+    private double price;
+    private Integer stock;
+    private boolean active;
+
+    // Getters y setters
+    public Integer getProductId() {
+        return productId;
     }
 
-    public void setIdProducto(Integer idProducto) {
-        this.idProducto = idProducto;
+    public void setProductId(Integer productId) {
+        this.productId = productId;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Integer getIdCategory() {
-        return idCategory;
+    public Integer getCategoryId() {
+        return categoryId;
     }
 
-    public void setIdCategory(Integer idCategory) {
-        this.idCategory = idCategory;
+    public void setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
     }
 
-    public String getCodeBarra() {
-        return codeBarra;
+    public String getBarcode() {
+        return barcode;
     }
 
-    public void setCodeBarra(String codeBarra) {
-        this.codeBarra = codeBarra;
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
     }
 
-    public BigDecimal getPrecio() {
-        return precio;
+    public double getPrice() {
+        return price;
     }
 
-    public void setPrecio(BigDecimal precio) {
-        this.precio = precio;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public Integer getCantidadStock() {
-        return cantidadStock;
+    public Integer getStock() {
+        return stock;
     }
 
-    public void setCantidadStock(Integer cantidadStock) {
-        this.cantidadStock = cantidadStock;
+    public void setStock(Integer stock) {
+        this.stock = stock;
     }
 
-    public Boolean getState() {
-        return state;
+    public boolean isActive() {
+        return active;
     }
 
-    public void setState(Boolean state) {
-        this.state = state;
-    }
-
-    public Categoria getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }
