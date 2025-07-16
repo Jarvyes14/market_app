@@ -12,7 +12,7 @@ public class Cliente {
 
     private String nombre;
 
-    private String apellido;
+    private String apellidos;
 
     private Long celular;
 
@@ -41,11 +41,11 @@ public class Cliente {
     }
 
     public String getApellido() {
-        return apellido;
+        return apellidos;
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        this.apellidos = apellido;
     }
 
     public Long getCelular() {
